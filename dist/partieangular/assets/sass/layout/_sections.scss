@@ -1,0 +1,473 @@
+/*-------------------------------------------------
+    [ ### Auction Categories ]
+*/
+.single-auction-cat {
+	border: 1px solid $color__border-one;
+	display: block;
+	border-radius: 10px;
+	text-align: center;
+    padding: 40px 20px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-bottom: 30px;
+    @media only screen and (max-width:1199px){
+        padding: 30px 15px;
+    }
+    @media only screen and (max-width:991px){
+        padding: 40px 15px;
+    }
+    @media only screen and (max-width:767px){
+        padding: 30px 15px;
+    }
+    &:hover {
+        border-color: rgba($color__primary,0.5);
+    }
+    &.cat-red {
+        &:hover {
+            border-color: rgba($red,0.5);
+        }
+        .cat-icon {
+            color: $red;
+        }
+        .cat-no {
+            background-color: rgba($red,0.5);
+        }
+    }
+    &.cat-green {
+        &:hover {
+            border-color: rgba($green,0.5);
+        }
+        .cat-icon {
+            color: $green;
+        }
+        .cat-no {
+            background-color: rgba($green,0.5);
+        }
+    }
+    &.cat-yellow {
+        &:hover {
+            border-color: rgba($yellow,0.5);
+        }
+        .cat-icon {
+            color: $yellow;
+        }
+        .cat-no {
+            background-color: rgba($yellow,0.5);
+        }
+    }
+    &.cat-turquoise {
+        &:hover {
+            border-color: rgba($turquoise,0.5);
+        }
+        .cat-icon {
+            color: $turquoise;
+        }
+        .cat-no {
+            background-color: rgba($turquoise,0.5);
+        }
+    }
+    &.cat-matterhorn {
+        &:hover {
+            border-color: rgba($matterhorn,0.5);
+        }
+        .cat-icon {
+            color: $matterhorn;
+        }
+        .cat-no {
+            background-color: rgba($matterhorn,0.5);
+        }
+    }
+    &.cat-orange {
+        &:hover {
+            border-color: rgba($orange,0.5);
+        }
+        .cat-icon {
+            color: $orange;
+        }
+        .cat-no {
+            background-color: rgba($orange,0.5);
+        }
+    }
+    &.cat-violet {
+        &:hover {
+            border-color: rgba($blue_violet,0.5);
+        }
+        .cat-icon {
+            color: $blue_violet;
+        }
+        .cat-no {
+            background-color: rgba($blue_violet,0.5);
+        }
+    }
+    .cat-icon {
+        font-size: 60px;
+        margin-bottom: 20px;
+        color: $color__primary;
+    }
+    .cat-name {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .cat-no {
+        display: inline-block;
+        background-color: rgba($color__primary,0.35);
+        color: #fff;
+        border-radius: 5px;
+        padding: 2px 10px;
+    }
+}
+
+
+/*-------------------------------------------------
+    [ ### Facility Area ]
+*/
+.facility-area {
+    margin-top: -95px;
+    position: relative;
+    z-index: 1;
+    @media only screen and (max-width: 991px){
+        padding-top: 100px;
+        margin-top: 0;
+    }
+    .facility-content > div {
+        &:nth-child(4n-3) .facility-box .icon { 
+            border-color: $color__primary;
+            &:before {
+                background-color: $color__primary;
+            }
+        }
+        &:nth-child(4n-2) .facility-box .icon { 
+            border-color: $green;
+            &:before {
+                background-color: $green;
+            }
+        }
+        &:nth-child(4n-1) .facility-box .icon { 
+            border-color: $blue_violet;
+            &:before {
+                background-color: $blue_violet;
+            }
+        }
+    }
+}
+.facility-box {
+    text-align: center;
+    border-radius: 7px;
+    padding: 40px 10px 38px;
+    background-color: $color__secondary;
+    box-shadow: 0 0 7px rgba($black,0.1);
+    margin-bottom: 30px;
+}
+  
+.facility-box {
+    .icon {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        font-size: 25px;
+        color: #fff;
+        line-height: 80px;
+        border: 1px solid $turquoise;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+        &:before {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $turquoise;
+            margin: 6px;
+            border-radius: 50%;
+        }
+        span {
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            display: inline-block;
+        }
+    }
+    .title {
+        margin-bottom: 0;
+        margin-top: 10px;
+        text-transform: capitalize;
+        font-size: 16px;
+        color: $color__widget-text;
+    }  
+
+    &:hover .icon > span, 
+    &:focus .icon > span {
+        -webkit-transform: rotateY(-180deg);
+                transform: rotateY(-180deg);
+    } 
+}
+
+
+/*-------------------------------------------------
+    [ ### Win Steps Block ]
+*/
+.win-steps-block {
+    .card-center {
+        padding: 0 50px;
+        @media only screen and (max-width: 1199px) {
+            padding: 0 15px;
+        }
+    }
+    .card-center .card-icon {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 1px solid $color__border-one;
+        margin: 0 auto 25px;
+        line-height: 130px;
+        position: relative;
+        &:before {
+            position: absolute;
+            width: calc(100% + 16px);
+            height: calc(100% + 16px);
+            border-radius: 50%;
+            border: 1px dashed $color__primary;
+            content: "";
+            left: -8px;
+            top: -8px;
+            -webkit-animation: round360 20s linear infinite;
+                    animation: round360 20s linear infinite;
+        }
+        .step {
+            position: absolute;
+            right: 0px;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            background-color: $color__primary;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+    .heading {
+        margin-bottom: 15px;
+    }
+}
+
+/*-------------------------------------------------
+    [ ### Work Brand ]
+*/
+.work-brand-block {
+    .brand-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        margin: -15px;
+    }
+    .brands-link {
+        border: 1px solid rgba($color__primary,0.3);
+        height: 120px;
+        cursor: pointer;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding: 20px;
+        position: relative;
+        border-radius: 8px;
+        &:before {
+            position: absolute;
+            left: 50%;
+            bottom: -60px;
+            width: 1px;
+            height: 60px;
+            background-color: rgba($color__primary,0.3);
+            content: "";
+        }
+        &:after {
+            position: absolute;
+            left: calc(50% - 4px);
+            bottom: -66px;
+            width: 10px;
+            height: 10px;
+            background-color: $color__primary;
+            content: "";
+            border-radius: 50%;
+            @media only screen and (max-width: 480px) {
+                display: none;
+            }
+        }
+        img {
+            margin: 0 auto;
+        }
+    }
+    .brands-carousel {
+        position: relative;
+        &:before {
+            position: absolute;
+            content: "";
+            height: 1px;
+            width: 100%;
+            background-color: rgba($color__primary,0.3);
+            left: 0;
+            top: 50%;
+            @media only screen and (max-width: 480px) {
+                display: none;
+            }
+        }
+        .owl-stage > div:nth-child(2n) {
+            margin-top: 240px;
+            @media only screen and (max-width: 480px) {
+                margin-top: 0;
+            }
+            .brands-link {
+                &:before {
+                    bottom: auto;
+                    top: -60px;
+                }
+                &:after {
+                    bottom: auto;
+                    top: -66px;
+                }
+            }
+        }
+    }
+}
+
+
+/*-------------------------------------------------
+    [ ### Fan Fact Block ]
+*/
+.fanfact-block {
+    .btn-default {
+        margin-top: 20px;
+    }
+    .fanfact-content {
+        @media only screen and (max-width: 1199px){
+            padding-right: 30px;
+        }
+        @media only screen and (max-width: 991px){
+            padding-right: 0px;
+        }
+    }
+}
+.fanfact-promo-numbers {
+    margin: 0 -8px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+                -ms-grid-row-align: flex-end;
+            align-items: flex-end;
+    @media only screen and (max-width:575px){
+        margin: 0 -5px;
+    }
+    @media only screen and (max-width: 991px){
+        padding-top: 60px;
+    }
+    [class*='col-'] {
+        padding: 0 8px;
+        @media only screen and (max-width:575px){
+            padding: 0 5px;
+        }
+        @media only screen and (max-width:480px){
+            max-width: 100%;
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 100%;
+                    flex: 0 0 100%;
+        }
+    }
+    .promo-number {
+        margin-bottom: 30px;
+        background-color: $color__primary;
+        text-align: center;
+        padding: 50px 10px 35px;
+        position: relative;
+        overflow: hidden;
+        @media only screen and (max-width: 1199px){
+            padding-bottom: 30px;
+        }
+        @media only screen and (max-width:480px){
+            padding-top: 30px;
+        }
+        &.number-green {
+            background-color: $green;
+            padding-top: 170px;
+            @media only screen and (max-width:480px){
+                padding-top: 30px;
+            }
+        }
+        &.number-orange {
+            background-color: $harley_davidson_orange;
+            padding-top: 80px;
+            @media only screen and (max-width:480px){
+                padding-top: 30px;
+            }
+        }
+        &:hover {
+            &:before {
+                -webkit-transform: translate3d(-5% ,-5% ,0);
+                        transform: translate3d(-5% ,-5% ,0);
+            }
+            &:after {
+                -webkit-transform: translate3d(-8% ,-8% ,0);
+                        transform: translate3d(-8% ,-8% ,0);
+            }
+        }
+        .animation-circle-inverse {
+            position: absolute;
+            right: -15px;
+            top: -15px;
+        }
+    }
+    .odometer-wrap {
+        font-size: 24px;
+        line-height: 1em;
+        font-weight: 700;
+        color: $white;
+        margin-bottom: 0px;
+        font-family: $font_heading;
+        text-transform: uppercase;
+        .odometer {
+            font-size: 48px;
+            line-height: 0.85em;
+            @media only screen and (max-width: 1199px){
+                font-size: 42px;
+            }
+            @media only screen and (max-width:575px){
+                font-size: 38px;
+            }
+        }
+        sub {
+            bottom: -11px;
+            left: 3px;
+        }
+    }
+	.promo-title {
+        color: $white;
+        font-size: 20px;
+        text-transform: capitalize;
+        font-weight: normal;
+        margin-bottom: 0;
+        margin-top: 5px;
+        @media only screen and (min-width:991px) and (max-width:1199px){
+            font-size: 16px;
+        }
+        @media only screen and (max-width:767px){
+            font-size: 18px;
+        }
+    }
+}
