@@ -1,0 +1,181 @@
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Page Title Area
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div class="page-title-area bg-white-smoke">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="page-header-content text-center">
+          <div class="page-header-caption">
+            <h2 class="page-title">My Account</h2>
+          </div>
+          <!--~~./ page-header-caption ~~-->
+          <div class="breadcrumb-area">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/home">Home</a></li>
+              <li class="breadcrumb-item active">Sign Up</li>
+            </ol>
+          </div>
+          <!--~~./ breadcrumb-area ~~-->
+        </div>
+        <!--~~./ page-header-content ~~-->
+      </div>
+    </div>
+  </div>
+  <!--~~./ end container ~~-->
+</div>
+<!--~~./ end page title area ~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            User Signin Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div class="user-signup-block ptb-120">
+  <div
+    class="bg-left bg-image"
+    style="background-image: url('assets/images/shape/signup-shape.png')"
+  ></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="sing-in-mockup md-mrb-60">
+          <img src="assets/images/others/signin-mockup.png" alt="Mockup" />
+        </div>
+      </div>
+      <!--/.col-lg-2-->
+      <div class="col-lg-6">
+        <div class="user-register-area">
+          <div class="form-content">
+            <div class="form-header">
+              <h4 class="form-subheading">Inscription</h4>
+              <h2 class="heading">Bienvenu à Biddoshop</h2>
+            </div>
+            <form (submit)="save()" class="default-form signup-form">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input
+                      id="nom"
+                      name="nom"
+                      class="form-controller"
+                      type="text"
+                      [(ngModel)]="user.displayName"
+                    />
+                  </div>
+                  <!--/.form-group-->
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="telephone">Telephone</label>
+                    <input
+                      id="telephone"
+                      name="telephone"
+                      class="form-controller"
+                      type="text"
+                      [(ngModel)]="user.phoneNumber"
+                    />
+                  </div>
+                  <!--/.form-group-->
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="mail">Email</label>
+                    <input
+                      id="mail"
+                      name="mail"
+                      class="form-controller"
+                      type="email"
+                      [(ngModel)]="user.email"
+                    />
+                  </div>
+                  <!--/.form-group-->
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="mdp">Mot de passe </label>
+                    <input
+                      id="mdp"
+                      name="mdp "
+                      class="form-controller"
+                      type="password"
+                      [(ngModel)]="user.password"
+                    />
+                  </div>
+                  <!--/.form-group-->
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="adr">adresse </label>
+                    <input
+                      id="adr"
+                      name="mdp "
+                      class="form-controller"
+                      type="text "
+                      [(ngModel)]="user.adresse"
+                    />
+                  </div>
+                  <!--/.form-group-->
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="con_mdp"> Confirme Mot de passe </label>
+                    <input
+                      id="con_mdp"
+                      name="mdp "
+                      class="form-controller"
+                      [(ngModel)]="mdp"
+                      type="password"
+                    />
+                  </div>
+                  <!--/.form-group-->
+                </div>
+              </div>
+
+              <div class="login-form-remember">
+                <label
+                  ><input id="termssignin" value="" type="checkbox" /><span
+                    >I agree to the
+                    <a href="/signup">Terms, Privacy policy and fees</a></span
+                  ></label
+                >
+              </div>
+              <div class="login-form-remember">
+                <label
+                  ><input id="remembermesignin" value="" type="checkbox" /><span
+                    >Yes, I want to receive mail
+                  </span></label
+                >
+              </div>
+
+              <div class="form-btn-group">
+                <div class="form-login-area">
+                  <button type="submit" class="btn btn-default btn-primary">
+                    Sign Up
+                  </button>
+                </div>
+                <div class="login-form-register-now">
+                  You have no account ?
+                  <a class="btn-register-now" href="/signin">Sign In</a>
+                </div>
+              </div>
+              <div class="reg-others-media">
+                <div class="text">Or, User social media to sign in</div>
+                <div class="social-media-icons">
+                  <a href="/signup"><i class="fab fa-facebook-f"></i></a>
+                  <a href="/signup"><i class="fab fa-twitter"></i></a
+                  ><a href="/signup"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--~./ end user register area ~-->
+      </div>
+      <!-- /.col-lg-10 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!--~~./ end user signup block ~~-->

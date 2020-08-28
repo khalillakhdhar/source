@@ -1,0 +1,134 @@
+.winner-item {
+    text-align: center;
+    .winner-thumb {
+        width: 150px;
+        height: 150px;
+        border-radius: 35% 65% 61% 39% / 32% 33% 67% 68%;
+        box-shadow: 2px 2px 10px rgba($color__primary, 0.2);
+        margin: 0 auto;
+        position: relative;
+        > img {
+            border-style: solid;
+            border-color: $color__primary;
+            border-width: 5px 4px 1px 4px;
+            width: inherit;
+            height: inherit;
+            border-radius: inherit;
+        }
+        .product-icon {
+            width: 35px;
+            height: 35px;
+            background-color: $color__primary;
+            border-radius: 50%;
+            color: $white;
+            line-height: 37px;
+            position: absolute;
+            right: 11px;
+            bottom: 12px;
+            cursor: pointer;
+            &:hover + .product-thumb {
+                opacity: 1;
+                visibility: visible;
+                bottom: 12px;
+            }
+        }
+        .product-thumb {
+            width: 100px;
+            text-align: center;
+            position: absolute;
+            bottom: -25px;
+            right: -100px;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: all 0.4s;
+            transition: all 0.4s;
+            @media only screen and (max-width: 991px) {
+                width: 80px;
+                right: -80px;
+            }
+            @media only screen and (max-width: 575px) {
+                width: 65px;
+                right: -65px;
+            }
+        }
+    }
+    .info {
+        padding-top: 15px;
+        .winner-name {
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.auction-winner-block {
+    .winner-item .winner-thumb {
+        .product-thumb {
+            width: 80px;
+            right: -80px;
+        }
+        .product-icon:hover + .product-thumb {
+            bottom: 20px;
+        }
+    }
+    #winner-carousel .owl-stage {
+        > div.active:nth-child(5n) .winner-item .winner-thumb .product-thumb {
+            @media only screen and (min-width: 1200px) {
+                right: auto;
+                left: -80px;
+            }
+        }
+        > div.active:nth-child(4n) .winner-item .winner-thumb .product-thumb {
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                right: auto;
+                left: -80px;
+            }
+        }
+        > div.active:nth-child(3n) .winner-item .winner-thumb .product-thumb {
+            @media only screen and (min-width: 768px) and (max-width: 991px) {
+                right: auto;
+                left: -80px;
+            }
+        }
+        > div.active:nth-child(2n-1) .winner-item .winner-thumb .product-thumb {
+            @media only screen and (min-width: 480px) and (max-width: 767px) {
+                right: auto;
+                left: -80px;
+            }
+        }
+    }
+}
+
+.winner-page-block {
+    .winner-item {
+        margin-bottom: 35px;
+    }
+    .paging-navigation.pd-t-60 {
+        @media only screen and (max-width: 991px) {
+            padding-top: 40px;
+        }
+    }
+    .winner-list-area {
+        > div:nth-child(4n) .winner-item .winner-thumb .product-thumb {
+            right: auto;
+            left: -100px;
+            @media only screen and (max-width: 991px) {
+                left: auto;
+                right: -80px;
+            }
+        }
+        > div:nth-child(3n) .winner-item .winner-thumb .product-thumb {
+            @media only screen and (min-width: 768px) and (max-width: 991px) {
+                right: auto;
+                left: -80px;
+            }
+        }
+        > div:nth-child(2n) .winner-item .winner-thumb .product-thumb {
+            @media only screen and (min-width: 575px) and (max-width: 767px) {
+                right: auto;
+                left: -80px;
+            }
+        }
+    }
+}

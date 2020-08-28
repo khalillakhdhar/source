@@ -1,0 +1,96 @@
+
+<div class="user-signin-block ptb-120">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="sing-in-mockup md-mrb-60">
+                    <img src="assets/images/others/signin-mockup.png" alt="Mockup">
+                </div>
+            </div><!--/.col-lg-2-->
+             <form (submit)="add()" class="default-form signin-form">
+            <table >
+                <tr>
+                    <td colspan="2">
+                         <h1 _ngcontent-fkd-c56 class="heading">Ajouter enchere</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="exampleFormControlInput1" _ngcontent-onf-c56 >Titre</label>
+                    </td>
+                    <td>
+                        <input _ngcontent-gsw-c56 type="text" name="titre" id="exampleFormControlInput1" required [(ngModel)]="enchere.titre" class="form-controller ng-untouched ng-pristine ng-valid">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="exampleFormControlInput1" _ngcontent-onf-c56 >Date_debut</label>
+                    </td>
+                    
+                    <td>
+                        <input _ngcontent-gsw-c56 type="date" name="date_debut" id="exampleFormControlInput1" required [(ngModel)]="enchere.date_debut" class="form-controller ng-untouched ng-pristine ng-valid">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="exampleFormControlInput1" _ngcontent-onf-c56 >Date_fin</label>
+                    </td>
+                    
+                    <td>
+                        <input _ngcontent-gsw-c56 type="date" name="date_fin"  id="exampleFormControlInput1" required [(ngModel)]="enchere.date_fin" class="form-controller ng-untouched ng-pristine ng-valid">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="exampleFormControlInput1" _ngcontent-onf-c56 >Prix</label>
+                    </td>
+                    
+                    <td>
+                        <input _ngcontent-gsw-c56 type="number" name="prix" id="exampleFormControlInput1" required [(ngModel)]="enchere.prix" class="form-controller ng-untouched ng-pristine ng-valid">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="exampleFormControlInput1" _ngcontent-onf-c56 >Categorie</label>
+                    </td>
+                    
+                    <td>
+                        <select name="categorie" _ngcontent-gsw-c56 id="exampleFormControlInput1" class="form-controller ng-untouched ng-pristine ng-valid" required [(ngModel)]="enchere.categorie" >
+                            <option>
+
+                            </option>
+                            <option _ngcontent-gsw-c56>
+                                Auter
+                            </option>
+                            <option>
+                                Immobilaire
+                            </option>
+                            <option>
+                                Electronique
+                            </option>
+                        </select>
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="exampleFormControlInput1" _ngcontent-onf-c56 >Description</label>
+                    </td>
+                    <td>
+                        <textarea name="description"_ngcontent-gsw-c56 id="exampleFormControlInput1" class="form-controller ng-untouched ng-pristine ng-valid" required [(ngModel)]="enchere.description" rows="2">
+
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button  _ngcontent-gsw-c56 type="submit" class="btn btn-default" >Ajouter</button>
+                    </td>
+                </tr>
+        
+            </table>
+            </form>
+            </div>
+            </div>
+</div>
+            
